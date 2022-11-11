@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Counter App</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>Lets make a counter app</h1>
+      <h2 id="counter">0</h2>
+      <button id="increment-btn" onclick="show()">
+        Increment
+      </button>
+      <button id="save-btn" onclick="save()">Save</button>
+      <button id="reset-btn" onclick="reset()">Reset</button>
+      <p id="para">Previous Entries:-</p>
+    </div>
+    <script>
+      let count = 0;
+      let h2 = document.getElementById("counter");
+      function increment() {
+        // console.log("The increment button was clicked");
+        count += 1;
+        console.log(count);
+        return count;
+      }
+      function show() {
+        let current = increment();
+        h2.innerText = current;
+      }
+
+      function save() {
+        let p = document.getElementById("para");
+        let countStr = count + " - ";
+        p.textContent += countStr;
+        console.log(count);
+      }
+      function reset() {
+        count = 0;
+        h2.innerText = count;
+      }
+    </script>
+  </body>
+</html>
