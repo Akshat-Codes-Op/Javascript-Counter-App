@@ -1,2 +1,3 @@
 # Javascript-Counter-App
-Created with CodeSandbox
+ Made by :- Akshat Goel
+
